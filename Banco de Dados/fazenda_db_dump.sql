@@ -384,3 +384,42 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2020-11-01 17:01:27
+
+## Inserts ##
+
+
+
+#Insert Dados Pessoais
+INSERT INTO `fazenda_bd`.`dadospessoais` (`nome`, `cpf`, `dataNascimento`) VALUES ('Matheus Cabral', '11122233344455', '09-22-1995');
+INSERT INTO `fazenda_bd`.`dadospessoais` (`nome`, `cpf`, `dataNascimento`) VALUES ('Robson Oliveira', '22233344455566', '02-12-1986');
+INSERT INTO `fazenda_bd`.`dadospessoais` (`nome`, `cpf`, `dataNascimento`) VALUES ('Adelaide Santos', '33344455566677', '01-30-2000');
+INSERT INTO `fazenda_bd`.`dadospessoais` (`nome`, `cpf`, `dataNascimento`) VALUES ('Paulo Nogueira', '44455566677788', '12-17-1972');
+INSERT INTO `fazenda_bd`.`dadospessoais` (`nome`, `cpf`, `dataNascimento`) VALUES ('Chico Duarte', '55566677788899', '12-10-1998');
+INSERT INTO `fazenda_bd`.`dadospessoais` (`nome`, `cpf`, `dataNascimento`) VALUES ('Laerton Dantas', '66677788899910', '02-03-1954');
+INSERT INTO `fazenda_bd`.`dadospessoais` (`nome`, `cpf`, `dataNascimento`) VALUES ('João Vitor', '77788899911100', '06-10-1981');
+
+INSERT INTO `fazenda_bd`.`dadosfuncionarios` (`salario`, `cargo`) VALUES ('7200.00', 'Analista');
+INSERT INTO `fazenda_bd`.`dadosfuncionarios` (`salario`, `cargo`) VALUES ('1900.00', 'Operador');
+INSERT INTO `fazenda_bd`.`dadosfuncionarios` (`salario`, `cargo`) VALUES ('1500.00', 'Fazendeiro');
+INSERT INTO `fazenda_bd`.`dadosfuncionarios` (`salario`, `cargo`) VALUES ('1500.00', 'Fazendeiro');
+INSERT INTO `fazenda_bd`.`dadosfuncionarios` (`salario`, `cargo`) VALUES ('2200.00', 'Operador');
+INSERT INTO `fazenda_bd`.`dadosfuncionarios` (`salario`, `cargo`) VALUES ('1900.00', 'Operador');
+INSERT INTO `fazenda_bd`.`dadosfuncionarios` (`salario`, `cargo`) VALUES ('3000.00', 'Contador');
+
+INSERT INTO `fazenda_bd`.`funcionarios` (`situacao`, `dadosFuncionarios_iddadosFuncionarios`, `dadosPessoais_iddadosPessoais`) VALUES ('Ativo', '1', '1');
+INSERT INTO `fazenda_bd`.`funcionarios` (`situacao`, `dadosFuncionarios_iddadosFuncionarios`, `dadosPessoais_iddadosPessoais`) VALUES ('Ativo', '2', '2');
+INSERT INTO `fazenda_bd`.`funcionarios` (`situacao`, `dadosFuncionarios_iddadosFuncionarios`, `dadosPessoais_iddadosPessoais`) VALUES ('Ativo', '3', '3');
+INSERT INTO `fazenda_bd`.`funcionarios` (`situacao`, `dadosFuncionarios_iddadosFuncionarios`, `dadosPessoais_iddadosPessoais`) VALUES ('Ativo', '4', '4');
+INSERT INTO `fazenda_bd`.`funcionarios` (`situacao`, `dadosFuncionarios_iddadosFuncionarios`, `dadosPessoais_iddadosPessoais`) VALUES ('Ativo', '5', '5');
+INSERT INTO `fazenda_bd`.`funcionarios` (`situacao`, `dadosFuncionarios_iddadosFuncionarios`, `dadosPessoais_iddadosPessoais`) VALUES ('Ativo', '6', '6');
+INSERT INTO `fazenda_bd`.`funcionarios` (`situacao`, `dadosFuncionarios_iddadosFuncionarios`, `dadosPessoais_iddadosPessoais`) VALUES ('Inativo', '7', '7');
+
+
+## Selects
+
+# Select com todos os funcionarios e dados da Fazenda
+
+Select * from dadospessoais dp join dadosfuncionarios df, funcionarios f;
+
+
+Select * from dadospessoais dp join dadosfuncionarios df on dp.dadosfuncionarios funcionarios f;
