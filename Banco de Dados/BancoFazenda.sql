@@ -251,12 +251,12 @@ INSERT INTO `fazenda_bd`.`funcionarios` (`situacao`,`dadospessoais_iddadosPessoa
 
 -- INSERT DAS VACAS E PERTENCENTES, PROLE E EQUIPAMENTO
 INSERT INTO `fazenda_bd`.`vaca` (`dataNascimento`, `quantidadeInseminacao`, `estado`, `custo`, `lucroEsperado`, `especie`) VALUES ('2010-01-12', '0', 'Produção', '2100.00', '42.000', 'Guzerá');
-INSERT INTO `fazenda_bd`.`vaca` (`dataNascimento`, `quantidadeInseminacao`, `estado`, `custo`, `lucroEsperado`, `lucroReal`, `especie`) VALUES ('2002-02-20', '3', 'Prenha', '2900.00', '91000.00', '82000.00', 'Guzerá');
+INSERT INTO `fazenda_bd`.`vaca` (`dataNascimento`, `quantidadeInseminacao`, `estado`, `custo`, `lucroEsperado`, `lucroReal`, `especie`) VALUES ('2002-02-20', '3', 'Prenha', '2900.00', '91000.00', '82000.00', 'Angus');
 INSERT INTO `fazenda_bd`.`vaca` (`dataNascimento`, `quantidadeInseminacao`, `estado`, `custo`, `lucroEsperado`, `lucroReal`, `especie`) VALUES ('2017-01-01', '0', 'Produção', '1200.00', '40000.00', '120000.00', 'Guzerá');
-INSERT INTO `fazenda_bd`.`vaca` (`dataNascimento`, `quantidadeInseminacao`, `estado`, `custo`, `lucroEsperado`, `lucroReal`, `especie`) VALUES ('2010-12-04', '0', 'Produção', '3300.00', '55000.00', '54000.00', 'Holandês');
+INSERT INTO `fazenda_bd`.`vaca` (`dataNascimento`, `quantidadeInseminacao`, `estado`, `custo`, `lucroEsperado`, `lucroReal`, `especie`) VALUES ('2010-12-04', '0', 'Produção', '3300.00', '55000.00', '54000.00', 'Devon');
 INSERT INTO `fazenda_bd`.`vaca` (`dataNascimento`, `quantidadeInseminacao`, `estado`, `custo`, `lucroEsperado`, `lucroReal`, `especie`) VALUES ('2002-06-20', '4', 'Produção', '6000.00', '160000.00', '180000.00', 'Holandês');
-INSERT INTO `fazenda_bd`.`vaca` (`dataNascimento`, `quantidadeInseminacao`, `estado`, `custo`, `lucroEsperado`, `lucroReal`, `especie`) VALUES ('2001-07-21', '10', 'Prenha', '1200.00', '11000.00', '10000.00', 'Holandês');
-INSERT INTO `fazenda_bd`.`vaca` (`dataNascimento`, `quantidadeInseminacao`, `estado`, `custo`, `lucroEsperado`, `lucroReal`, `especie`) VALUES ('2002-06-20', '3', 'Produção', '2100.00', '90000.00', '110000.00', 'Guzerá');
+INSERT INTO `fazenda_bd`.`vaca` (`dataNascimento`, `quantidadeInseminacao`, `estado`, `custo`, `lucroEsperado`, `lucroReal`, `especie`) VALUES ('2001-07-21', '10', 'Prenha', '1200.00', '11000.00', '10000.00', 'Angus');
+INSERT INTO `fazenda_bd`.`vaca` (`dataNascimento`, `quantidadeInseminacao`, `estado`, `custo`, `lucroEsperado`, `lucroReal`, `especie`) VALUES ('2002-06-20', '3', 'Produção', '2100.00', '90000.00', '110000.00', 'Gelbvieh');
 
 INSERT INTO `fazenda_bd`.`prole` (`inseminacao`, `expectativaParto`, `vaca_idvaca`) VALUES ('2002-03-10', '2002-12-10', '2');
 INSERT INTO `fazenda_bd`.`prole` (`inseminacao`, `expectativaParto`, `vaca_idvaca`) VALUES ('2004-02-12', '2004-11-12', '2');
@@ -304,451 +304,455 @@ INSERT INTO `fazenda_bd`.`equipamento` (`nome`, `tipo`, `estado`) VALUES ('Trato
 INSERT INTO `fazenda_bd`.`equipamento` (`nome`, `tipo`, `estado`) VALUES ('Trator 13', 'Colheiteira', 'Em Uso');
 INSERT INTO `fazenda_bd`.`equipamento` (`nome`, `tipo`, `estado`) VALUES ('Trator 14', 'Colheiteira', 'Em Manutenção');
 INSERT INTO `fazenda_bd`.`equipamento` (`nome`, `tipo`, `estado`) VALUES ('Trator 15', 'Colheiteira', 'Em Uso');
+SELECT 
+    *
+FROM
+    equipamento;
 
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '24', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '24', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '25', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '26', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '29', '45', '25', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '26', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '23', '4');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '24', '4');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '23', '4');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '24', '4');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '25', '4');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '26', '4');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '29', '45', '25', '4');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '26', '4');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '23', '4');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '4');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '4');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '4');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '4');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '4');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '24', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '24', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '25', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '26', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '29', '45', '25', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '26', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '2');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '23', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '23', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '25', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '26', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '29', '45', '25', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '26', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '23', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-11', '22', '39', '25', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-12', '30', '37', '25', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-13', '31', '39', '25', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-14', '40', '34', '25', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-15', '38', '39', '26', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-16', '39', '40', '25', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-17', '40', '31', '26', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-18', '43', '40', '25', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-19', '44', '39', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-20', '42', '39', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-21', '43', '39', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-22', '49', '38', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-23', '41', '39', '26', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-24', '40', '37', '27', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-25', '37', '39', '27', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-26', '39', '39', '27', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-27', '38', '38', '27', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-28', '39', '39', '27', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-29', '37', '38', '27', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-30', '35', '31', '27', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-21', '40', '37', '28', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-22', '41', '38', '28', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-23', '42', '39', '28', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-24', '32', '39', '28', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-25', '31', '38', '28', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-26', '30', '39', '28', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-27', '41', '37', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-28', '43', '38', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-29', '44', '39', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-30', '41', '40', '26', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-01', '40', '37', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-02', '41', '39', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-03', '42', '38', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-04', '41', '37', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-05', '37', '38', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-06', '39', '39', '26', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-07', '38', '35', '26', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-08', '40', '36', '26', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-09', '41', '37', '26', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-10', '37', '38', '29', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-11', '39', '31', '29', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-12', '38', '36', '29', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-13', '37', '39', '29', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-14', '39', '38', '27', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-15', '38', '37', '28', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-16', '37', '39', '30', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-17', '38', '38', '31', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-18', '35', '40', '31', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-19', '40', '41', '31', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-20', '41', '41', '31', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-21', '43', '42', '31', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-22', '41', '43', '31', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-23', '30', '41', '31', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-24', '31', '42', '31', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-25', '39', '41', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-26', '38', '39', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-27', '37', '38', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-28', '35', '39', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-29', '36', '39', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-30', '39', '39', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-02-01', '38', '40', '24', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-02-02', '31', '41', '25', '5');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '29', '45', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '29', '45', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '29', '45', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '29', '45', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-11', '22', '39', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-12', '30', '37', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-13', '31', '39', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-14', '40', '34', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-15', '38', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-16', '39', '40', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-17', '40', '31', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-18', '43', '40', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-19', '44', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-20', '42', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-21', '43', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-22', '49', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-23', '41', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-24', '40', '37', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-25', '37', '39', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-26', '39', '39', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-27', '38', '38', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-28', '39', '39', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-29', '37', '38', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-30', '35', '31', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-21', '40', '37', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-22', '41', '38', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-23', '42', '39', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-24', '32', '39', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-25', '31', '38', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-26', '30', '39', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-27', '41', '37', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-28', '43', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-29', '44', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-30', '41', '40', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-01', '40', '37', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-02', '41', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-03', '42', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-04', '41', '37', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-05', '37', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-06', '39', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-07', '38', '35', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-08', '40', '36', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-09', '41', '37', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-10', '37', '38', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-11', '39', '31', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-12', '38', '36', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-13', '37', '39', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-14', '39', '38', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-15', '38', '37', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-16', '37', '39', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-17', '38', '38', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-18', '35', '40', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-19', '40', '41', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-20', '41', '41', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-21', '43', '42', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-22', '41', '43', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-23', '30', '41', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-24', '31', '42', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-25', '39', '41', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-26', '38', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-27', '37', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-28', '35', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-29', '36', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-30', '39', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-02-01', '38', '40', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-13', '39', '41', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-14', '38', '42', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-15', '39', '41', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-16', '40', '39', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-17', '41', '38', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-18', '40', '39', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-18', '41', '38', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-19', '41', '39', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-20', '39', '37', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-21', '38', '39', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-22', '39', '37', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-22', '38', '39', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-23', '37', '39', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-24', '39', '41', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-25', '37', '41', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-26', '39', '40', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-27', '38', '42', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-28', '37', '41', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-29', '39', '43', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-30', '38', '41', '32', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-01', '39', '42', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-02', '39', '41', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-03', '38', '41', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-04', '33', '43', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-05', '39', '43', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-06', '34', '31', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-07', '39', '45', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-08', '34', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-09', '40', '38', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-10', '41', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-11', '42', '38', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-12', '41', '37', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-13', '43', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-14', '40', '38', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-15', '40', '37', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-16', '41', '39', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-17', '42', '39', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-18', '39', '38', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-19', '31', '38', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-20', '39', '38', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-21', '32', '37', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-22', '37', '37', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-23', '39', '39', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-24', '39', '37', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-25', '38', '39', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-26', '37', '38', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-27', '39', '37', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-28', '38', '37', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-29', '39', '40', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-30', '39', '41', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-11', '37', '42', '39', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-12', '39', '41', '38', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-13', '39', '41', '37', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-14', '38', '40', '39', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-15', '42', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-16', '41', '39', '23', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-17', '39', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-18', '42', '38', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-19', '22', '39', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-20', '30', '37', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-21', '31', '39', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-22', '40', '34', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-23', '38', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-24', '39', '40', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-25', '40', '31', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-26', '43', '40', '25', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-27', '44', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-28', '42', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-29', '43', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-30', '49', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-31', '41', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-01', '40', '37', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-02', '37', '39', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-03', '39', '39', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-04', '38', '38', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-05', '39', '39', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-06', '37', '38', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-07', '35', '31', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-08', '40', '37', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-09', '41', '38', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-10', '42', '39', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-11', '32', '39', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-12', '31', '38', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-13', '30', '39', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-14', '41', '37', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-15', '43', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-16', '44', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-17', '41', '40', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-18', '40', '37', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-19', '41', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-20', '42', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-21', '41', '37', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-22', '37', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-23', '39', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-24', '38', '35', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-25', '40', '36', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-26', '41', '37', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-27', '37', '38', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-28', '39', '31', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-29', '38', '36', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-30', '37', '39', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-01', '39', '38', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-02', '38', '37', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-03', '37', '39', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-04', '38', '38', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-05', '35', '40', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-06', '40', '41', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-07', '41', '41', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-08', '43', '42', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-09', '41', '43', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-10', '30', '41', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-11', '31', '42', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-12', '39', '41', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-13', '38', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-14', '37', '38', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-15', '35', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-16', '36', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-17', '39', '39', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-18', '38', '40', '24', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-20', '39', '41', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-21', '38', '42', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-22', '39', '41', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-23', '40', '39', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-24', '41', '38', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-25', '40', '39', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-26', '41', '38', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-27', '41', '39', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-28', '39', '37', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-29', '38', '39', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-30', '39', '37', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-01', '38', '39', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-02', '37', '39', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-03', '39', '41', '30', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-04', '37', '41', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-05', '39', '40', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-06', '38', '42', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-07', '37', '41', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-08', '39', '43', '31', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-09', '38', '41', '32', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-10', '39', '42', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-11', '39', '41', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-12', '38', '41', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-13', '33', '43', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-14', '39', '43', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-15', '34', '31', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-16', '39', '45', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-17', '34', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-18', '40', '38', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-19', '41', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-20', '42', '38', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-21', '41', '37', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-22', '43', '39', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-23', '40', '38', '26', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-24', '40', '37', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-25', '41', '39', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-26', '42', '39', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-27', '39', '38', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-28', '31', '38', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-29', '39', '38', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-30', '32', '37', '28', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-01', '37', '37', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-02', '39', '39', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-03', '39', '37', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-04', '38', '39', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-05', '37', '38', '27', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-06', '39', '37', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-07', '38', '37', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-08', '39', '40', '29', '6');
-INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-09', '39', '41', '29', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '4', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '2', '45', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '4', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '1', '4');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '2', '4');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '1', '4');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '2', '4');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '2', '4');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '4', '4');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '2', '45', '2', '4');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '4', '4');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '1', '4');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '4');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '4');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '4');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '4');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '4');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '4', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '39', '45', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '4', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '2');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '1', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '1', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '4', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '40', '45', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '4', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '1', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-11', '37', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-12', '40', '37', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-13', '31', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-14', '40', '34', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-15', '38', '39', '4', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-16', '39', '40', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-17', '40', '31', '4', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-18', '43', '40', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-19', '44', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-20', '42', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-21', '43', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-22', '49', '38', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-1', '41', '39', '4', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-2', '40', '37', '5', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-2', '37', '39', '5', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-4', '39', '39', '5', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-5', '38', '38', '5', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-6', '39', '39', '5', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-2', '37', '38', '5', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-1', '35', '31', '5', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-21', '40', '37', '6', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-22', '41', '38', '6', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-1', '42', '39', '6', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-2', '32', '39', '6', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-2', '31', '38', '6', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-4', '43', '39', '6', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-5', '41', '37', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-6', '43', '38', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-2', '44', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-1', '41', '40', '4', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-01', '40', '37', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-02', '41', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-03', '42', '38', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-04', '41', '37', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-05', '37', '38', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-06', '39', '39', '4', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-07', '38', '35', '4', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-08', '40', '36', '4', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-09', '41', '37', '4', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-10', '37', '38', '3', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-11', '39', '31', '3', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-12', '38', '36', '3', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-13', '37', '39', '3', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-14', '39', '38', '5', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-15', '38', '37', '6', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-16', '37', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-17', '38', '38', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-18', '35', '40', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-19', '40', '41', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-20', '41', '41', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-21', '43', '42', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-22', '41', '43', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-1', '37', '41', '1', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-2', '31', '42', '1', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-2', '39', '41', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-4', '38', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-5', '37', '38', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-6', '35', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-2', '36', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-1', '39', '39', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-02-01', '38', '40', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-02-02', '31', '41', '2', '5');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '2', '45', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '2', '45', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '39', '45', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '20', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '40', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '43', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '37', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-14', '39', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-15', '40', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-16', '38', '45', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-17', '42', '37', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-18', '40', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-10', '31', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-11', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-12', '41', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '39', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2002-12-13', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-11', '40', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-12', '40', '37', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-13', '31', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-14', '40', '34', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-15', '38', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-16', '39', '40', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-17', '40', '31', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-18', '43', '40', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-19', '44', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-20', '42', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-21', '43', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-22', '49', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-1', '41', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-2', '40', '37', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-2', '37', '39', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-4', '39', '39', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-5', '38', '38', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-6', '39', '39', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-2', '37', '38', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2003-10-1', '35', '31', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-21', '40', '37', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-22', '41', '38', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-1', '42', '39', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-2', '38', '39', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-2', '41', '38', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-4', '40', '39', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-5', '41', '37', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-6', '43', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-2', '44', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-12-1', '41', '40', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-01', '40', '37', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-02', '41', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-03', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-04', '41', '37', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-05', '37', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-06', '39', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-07', '38', '35', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-08', '40', '36', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-09', '41', '37', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-10', '37', '38', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-11', '39', '31', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-12', '38', '36', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-13', '37', '39', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-14', '39', '38', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-15', '38', '37', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-16', '37', '39', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-17', '38', '38', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-18', '35', '40', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-19', '40', '41', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-20', '41', '41', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-21', '43', '42', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-22', '41', '43', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-1', '39', '41', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-2', '31', '42', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-2', '39', '41', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-4', '38', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-5', '37', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-6', '35', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-2', '36', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-01-1', '39', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2011-02-01', '38', '40', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-13', '39', '41', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-14', '38', '42', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-15', '39', '41', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-16', '40', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-17', '41', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-18', '40', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-18', '41', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-19', '41', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-20', '39', '37', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-21', '38', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-22', '39', '37', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-22', '38', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-1', '37', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-2', '39', '41', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-2', '37', '41', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-4', '39', '40', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-5', '38', '42', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-6', '37', '41', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-2', '39', '43', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-06-1', '38', '41', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-01', '39', '42', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-02', '39', '41', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-03', '38', '41', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-04', '33', '43', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-05', '39', '43', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-06', '34', '31', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-07', '39', '45', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-08', '34', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-09', '40', '38', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-10', '41', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-11', '42', '38', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-12', '41', '37', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-13', '43', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-14', '40', '38', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-15', '40', '37', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-16', '41', '39', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-17', '42', '39', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-18', '39', '38', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-19', '31', '38', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-20', '39', '38', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-21', '32', '37', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-22', '37', '37', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-1', '39', '39', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-2', '39', '37', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-2', '38', '39', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-4', '37', '38', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-5', '39', '37', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-6', '38', '37', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-2', '39', '40', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2005-07-1', '39', '41', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-11', '37', '42', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-12', '39', '41', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-13', '39', '41', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-14', '38', '40', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-15', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-16', '41', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-17', '39', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-18', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-19', '39', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-20', '40', '37', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-21', '31', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-22', '40', '34', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-1', '38', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-2', '39', '40', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-2', '40', '31', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-4', '43', '40', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-5', '44', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-6', '42', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-2', '43', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-1', '49', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-10-31', '41', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-01', '40', '37', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-02', '37', '39', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-03', '39', '39', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-04', '38', '38', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-05', '39', '39', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-06', '37', '38', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-07', '35', '31', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-08', '40', '37', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-09', '41', '38', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-10', '42', '39', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-11', '32', '39', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-12', '31', '38', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-13', '40', '39', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-14', '41', '37', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-15', '43', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-16', '44', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-17', '41', '40', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-18', '40', '37', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-19', '41', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-20', '42', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-21', '41', '37', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-22', '37', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-1', '39', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-2', '38', '35', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-2', '40', '36', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-4', '41', '37', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-5', '37', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-6', '39', '31', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-2', '38', '36', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-11-1', '37', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-01', '39', '38', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-02', '38', '37', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-03', '37', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-04', '38', '38', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-05', '35', '40', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-06', '40', '41', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-07', '41', '41', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-08', '43', '42', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-09', '41', '43', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-10', '40', '41', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-11', '31', '42', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-12', '39', '41', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-13', '38', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-14', '37', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-15', '35', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-16', '36', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-17', '39', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-18', '38', '40', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-20', '39', '41', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-21', '38', '42', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-22', '39', '41', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-1', '40', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-2', '41', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-2', '40', '39', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-4', '41', '38', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-5', '41', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-6', '39', '37', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-2', '38', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2009-12-1', '39', '37', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-01', '38', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-02', '37', '39', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-03', '39', '41', '1', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-04', '37', '41', '3', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-05', '39', '40', '3', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-06', '38', '42', '3', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-07', '37', '41', '3', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-08', '39', '43', '3', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-09', '38', '41', '3', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-10', '39', '42', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-11', '39', '41', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-12', '38', '41', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-13', '33', '43', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-14', '39', '43', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-15', '34', '31', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-16', '39', '45', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-17', '34', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-18', '40', '38', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-19', '41', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-20', '42', '38', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-21', '41', '37', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-22', '43', '39', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-1', '40', '38', '4', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-2', '40', '37', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-3', '41', '39', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-4', '42', '39', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-5', '39', '38', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-6', '31', '38', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-2', '39', '38', '6', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-01-1', '32', '37', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-01', '37', '37', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-02', '39', '39', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-03', '39', '37', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-04', '38', '39', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-05', '37', '38', '5', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-06', '39', '37', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-07', '38', '37', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-08', '39', '40', '2', '6');
+INSERT INTO `fazenda_bd`.`ordenha` (`dataOrdenha`, `volume`, `temperaturaLeite`, `equipamento_idequipamento`, `vaca_idvaca`) VALUES ('2010-02-09', '39', '41', '2', '6');
 
 
 -- -----------------------------------------------------
@@ -768,32 +772,95 @@ CREATE VIEW Consulta_Funcionarios AS
         funcionarios AS f ON dp.iddadosPessoais = f.dadospessoais_iddadosPessoais
     WHERE
         f.situacao = 'Ativo';
-
-SELECT 
-    *
-FROM
-    vaca;
-    
+        
 CREATE VIEW Consulta_Lucro_Agro AS
     SELECT 
         especie AS 'Espécie',
-        (lucroEsperado - lucroReal) AS 'Lucro Total',
         lucroReal AS 'Lucro Real',
         lucroEsperado AS 'Lucro Esperado',
-        custo AS 'Valor',
+        (lucroReal - lucroEsperado) AS 'Diferença Real-Esperado',
+        custo AS 'Valor do Bovino',
         quantidadeInseminacao AS 'Quantidade de Inseminações'
     FROM
         vaca
-    ORDER BY lucroReal DESC, custo;
+    ORDER BY lucroReal DESC , custo;
     
+CREATE VIEW Consulta_Registro_Geral AS
+	SELECT 
+			v.especie AS 'Espécia',
+			o.volume AS 'Volume de Leite',
+			o.temperaturaLeite AS 'Temperatura',
+			v.estado AS 'Estado'
+		FROM
+			ordenha o
+				JOIN
+			vaca v ON o.vaca_idvaca = v.idvaca;
 
-SELECT v.especie as 'Espécia', SUM(o.volume) as 'Volume de Leite', o.temperaturaLeite as 'Temperatura', v.estado as 'Estado'
-FROM ordenha o JOIN vaca v ON o.vaca_idvaca = v.idvaca
-GROUP BY v.especie;
+		CREATE VIEW Consulta_Volume_Leite AS
+			SELECT 
+				v.especie AS 'Espécie', SUM(o.volume) AS 'Volume de Leite'
+			FROM
+				ordenha o
+					JOIN
+				vaca v ON o.vaca_idvaca = v.idvaca
+			GROUP BY v.especie;
+    
+CREATE VIEW Consulta_Volume_Medio AS
+    SELECT 
+        v.especie AS 'Espécie', AVG(o.volume) AS 'Volume de Leite'
+    FROM
+        ordenha o
+            JOIN
+        vaca v ON o.vaca_idvaca = v.idvaca
+    GROUP BY v.especie;
+    
+CREATE VIEW Consulta_Temperatura_Media AS
+    SELECT 
+        v.especie AS 'Espécie',
+        AVG(o.temperaturaLeite) AS 'Temperatura do Leite'
+    FROM
+        ordenha o
+            JOIN
+        vaca v ON o.vaca_idvaca = v.idvaca
+    GROUP BY v.especie;
+    
+CREATE VIEW Consulta_Ordenha AS
+    SELECT DISTINCT
+        (v.especie) AS 'Espécie', COUNT(v.especie) AS 'Quantidade'
+    FROM
+        ordenha o
+            JOIN
+        vaca v ON o.vaca_idvaca = v.idvaca
+    GROUP BY v.especie;
+    
+CREATE VIEW Consulta_Python AS
+	SELECT 
+			v.idVaca AS 'Id',
+			v.especie AS 'Espécia',
+			SUM(o.volume) AS 'Volume de Leite',
+			o.temperaturaLeite AS 'Temperatura',
+			v.estado AS 'Estado'
+		FROM
+			ordenha o
+				JOIN
+			vaca v ON o.vaca_idvaca = v.idvaca
+		GROUP BY 
+			v.idVaca;
+
 -- -----------------------------------------------------
 -- VIEWS
 -- -----------------------------------------------------
 
 SELECT * FROM Consulta_Funcionarios;
+
+SELECT * FROM Consulta_Registro_Geral;
     
 SELECT * FROM Consulta_Lucro_Agro;
+
+SELECT * FROM Consulta_Volume_Leite;
+
+SELECT * FROM Consulta_Volume_Medio;
+
+SELECT * FROM Consulta_Temperatura_Media;
+
+SELECT * FROM Consulta_Ordenha
